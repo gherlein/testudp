@@ -7,8 +7,8 @@ server.on('error', (err) => {
     server.close();
 });
 server.on('message', (msg, senderInfo) => {
-    console.log('udp (' + senderInfo.address + ') [' + count + ']: ' + msg);
     count += 1;
+    console.log('udp (' + senderInfo.address + ') [' + count + ']: ' + msg);
 });
 server.on('listening', () => {
     const address = server.address();
